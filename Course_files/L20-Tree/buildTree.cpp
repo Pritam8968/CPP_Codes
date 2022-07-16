@@ -39,7 +39,7 @@ node *buildTreePost(int postorder[], int inorder[], int start, int end) {
         return NULL;
     }
     int curr = postorder[idx];
-    idx++;
+    idx--;
 
     node *newNode = new node(curr);
     if (start == end) {
