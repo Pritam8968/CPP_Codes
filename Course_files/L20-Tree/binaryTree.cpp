@@ -37,8 +37,9 @@ int noOfNodes(struct node *root) {
     if (root == NULL) {
         return 0;
     }
-    return noOfNodes(root->left) + noOfNodes(root->right) + 1;
+    return noOfNodes(root->left) + noOfNodes(root->right) + 1; //+1 for the root itself
 }
+// returns the sum of all the nodes
 int sumOfNodes(struct node *root) {
     if (root == NULL) {
         return 0;
@@ -77,5 +78,7 @@ int main(int argc, char const *argv[]) {
     cout << "Postorder: ";
     postorder(root);
     cout << endl;
+    cout << "No. of nodes: " << noOfNodes(root) << endl;
+    cout << "sum of the nodes: " << sumOfNodes(root) << endl;
     return 0;
 }
